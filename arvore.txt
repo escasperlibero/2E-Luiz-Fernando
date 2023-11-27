@@ -1,0 +1,70 @@
+
+### Árvore 1 (Lista1):
+1. Criação da Árvore:
+   ```
+             45
+           /    \
+         20      60
+        / \     /  \
+       7   30  81   97
+      / \       \
+     4   8      100
+   ```
+
+2. Adição de um valor (25):
+   ```
+             45
+           /    \
+         20      60
+        / \     /  \
+       7   30  81   97
+      / \   \
+     4   8  25
+   ```
+
+3. Remoção de um nó (20, nó com dois filhos):
+   ```
+             45
+           /    \
+         25      60
+        / \     /  \
+       7   30  81   97
+      / \       \
+     4   8      100
+   ```
+
+### Árvore 2 (Lista2):
+1. Criação da Árvore:
+   ```
+             15
+           /    \
+         6      18
+        / \    /  \
+       3   7  16   20
+            \
+             4
+   ```
+
+2. Adição de um valor (12):
+   ```
+             15
+           /    \
+         6      18
+        / \    /  \
+       3   7  16   20
+      /
+     12
+   ```
+
+3. Remoção de um nó (16, nó sem filhos):
+   ```
+             15
+           /    \
+         6      18
+        / \    /  \
+       3   7  20
+      /
+     12
+   ```
+
+Esses são exemplos de como as árvores podem ser modificadas adicionando valores e removendo nós. Lembre-se de que as árvores binárias de busca mantêm a propriedade de ordenação, onde os nós à esquerda são menores que o nó pai, e os nós à direita são maiores.
