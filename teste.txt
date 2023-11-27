@@ -1,0 +1,55 @@
+
+1. Dentro da pasta `src`, crie uma nova pasta chamada `utils` (ou outro nome que preferir).
+
+2. Dentro da pasta `utils`, crie um novo arquivo chamado `mensagem.js`.
+
+3. Abra o arquivo `mensagem.js` e adicione o seguinte código:
+
+```javascript
+// src/utils/mensagem.js
+
+// Função que retorna uma mensagem
+const obterMensagem = () => {
+  return "Olá! Esta é a mensagem da sua função.";
+};
+
+// Exporta a função para ser utilizada em outros lugares
+export default obterMensagem;
+```
+
+4. Salve o arquivo.
+
+5. Agora, vamos usar essa função no arquivo `App.js`. Abra o arquivo `src/App.js` e modifique-o da seguinte maneira:
+
+```jsx
+// src/App.js
+import React from 'react';
+import './App.css';
+import obterMensagem from './utils/mensagem'; // Importa a função
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <p>
+          {obterMensagem()} {/* Chama a função e exibe a mensagem */}
+        </p>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+6. Salve o arquivo.
+
+7. Execute o projeto usando o comando no terminal:
+
+```bash
+npm start
+```
+
+8. O navegador abrirá automaticamente e exibirá a mensagem retornada pela função.
+
+Certifique-se de anexar os arquivos `mensagem.js` e `App.js` modificados na atividade.
