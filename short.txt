@@ -1,0 +1,40 @@
+// Função para realizar o Insertion Sort
+function insertionSort(vetor) {
+  const tamanho = vetor.length;
+
+  // Loop externo para percorrer todo o vetor
+  for (let i = 1; i < tamanho; i++) {
+    // Armazenar o valor atual que será movido para a posição correta
+    const valorAtual = vetor[i];
+    let j = i - 1;
+
+    // Mover os elementos maiores que o valor atual para a direita
+    while (j >= 0 && vetor[j] > valorAtual) {
+      vetor[j + 1] = vetor[j];
+      j--;
+    }
+
+    // Colocar o valor atual na posição correta
+    vetor[j + 1] = valorAtual;
+  }
+
+  // O vetor agora está ordenado
+  return vetor;
+}
+
+// Criar um vetor de tamanho 30 com números ímpares em ordem crescente
+const tamanhoVetor = 30;
+const vetorOriginal = Array.from({ length: tamanhoVetor }, (_, index) => index * 2 + 1);
+
+// Embaralhar o vetor para garantir a ordem inicial não influencia o resultado
+for (let i = tamanhoVetor - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [vetorOriginal[i], vetorOriginal[j]] = [vetorOriginal[j], vetorOriginal[i]];
+}
+
+// Chamar a função insertionSort para ordenar o vetor
+const vetorOrdenado = insertionSort(vetorOriginal.slice()); // Usar slice para criar uma cópia do vetor original
+
+// Exibir o resultado
+console.log("Vetor Original:", vetorOriginal);
+console.log("Vetor Ordenado:", vetorOrdenado);
