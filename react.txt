@@ -1,0 +1,42 @@
+Desenvolver e executar um programa React envolve vários passos. Aqui está um guia passo a passo para criar um novo aplicativo React usando o `create-react-app`, uma ferramenta que facilita a configuração inicial de projetos React:
+
+### Passo 1: Instalação do Node.js e npm
+Certifique-se de que o Node.js e o npm (Node Package Manager) estejam instalados em seu sistema. Você pode baixá-los em [nodejs.org](https://nodejs.org/).
+
+### Passo 2: Instalação do create-react-app
+Abra o terminal e execute o seguinte comando para instalar o `create-react-app` globalmente:
+
+```bash
+npm install -g create-react-app
+```
+
+### Passo 3: Criação do Projeto React
+No terminal, execute o seguinte comando para criar um novo projeto React chamado "meu-app" (substitua "meu-app" pelo nome desejado):
+
+```bash
+npx create-react-app meu-app
+```
+
+### Passo 4: Navegação para o Diretório do Projeto
+Vá para o diretório do projeto usando o seguinte comando:
+
+```bash
+cd meu-app
+```
+
+### Passo 5: Execução do Projeto
+Agora, você pode iniciar o servidor de desenvolvimento e visualizar seu aplicativo React localmente com o seguinte comando:
+
+```bash
+npm start
+```
+
+Este comando inicia o servidor de desenvolvimento e abre automaticamente o aplicativo em seu navegador padrão. Você verá uma página padrão do React.
+
+### Passo 6: Edição do Código
+Abra o projeto em seu editor de código favorito (como VSCode) e comece a editar o arquivo `src/App.js`. Você pode fazer alterações no código e ver as atualizações em tempo real no navegador.
+
+### Passo 7: Parada do Servidor de Desenvolvimento
+Para parar o servidor de desenvolvimento, pressione `Ctrl + C` no terminal.
+
+Este é um guia básico para iniciar um projeto React usando o `create-react-app`. Lembre-se de que este é apenas o início, e há muitos conceitos e recursos adicionais a serem explorados no desenvolvimento React.
