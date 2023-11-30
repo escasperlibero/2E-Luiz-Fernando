@@ -1,0 +1,87 @@
+
+```bash
+npm install react-router-dom
+```
+
+Agora, vamos criar um componente chamado `Navegacao` que terá links para duas telas diferentes usando o roteamento.
+
+1. Crie um novo arquivo chamado `Navegacao.js` na pasta `src`:
+
+```jsx
+// src/Navegacao.js
+import React from 'react';
+import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
+import TelaUm from './TelaUm';
+import TelaDois from './TelaDois';
+
+const Navegacao = () => {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/tela-um">Tela Um</Link>
+            </li>
+            <li>
+              <Link to="/tela-dois">Tela Dois</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Route path="/tela-um" component={TelaUm} />
+        <Route path="/tela-dois" component={TelaDois} />
+      </div>
+    </Router>
+  );
+};
+
+export default Navegacao;
+```
+
+2. Crie dois componentes chamados `TelaUm.js` e `TelaDois.js` na mesma pasta (`src`):
+
+```jsx
+// src/TelaUm.js
+import React from 'react';
+
+const TelaUm = () => {
+  return <h2>Tela Um</h2>;
+};
+
+export default TelaUm;
+```
+
+```jsx
+// src/TelaDois.js
+import React from 'react';
+
+const TelaDois = () => {
+  return <h2>Tela Dois</h2>;
+};
+
+export default TelaDois;
+```
+
+3. Agora, atualize o `App.js` para usar o componente `Navegacao`:
+
+```jsx
+// src/App.js
+import React from 'react';
+import './App.css';
+import Navegacao from './Navegacao';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <Navegacao />
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Certifique-se de anexar os arquivos `Navegacao.js`, `TelaUm.js`, `TelaDois.js`, e `App.js` modificados na atividade.
