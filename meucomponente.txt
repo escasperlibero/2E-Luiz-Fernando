@@ -1,0 +1,51 @@
+
+1. Crie um novo arquivo chamado `MeuComponente.js` na pasta `src`:
+
+```jsx
+// src/MeuComponente.js
+import React from 'react';
+
+const MeuComponente = (props) => {
+  return (
+    <div>
+      <h2>{props.titulo}</h2>
+      <p>{props.conteudo}</p>
+    </div>
+  );
+};
+
+export default MeuComponente;
+```
+
+2. Agora, modifique o arquivo `App.js` para usar este componente:
+
+```jsx
+// src/App.js
+import React from 'react';
+import './App.css';
+import MeuComponente from './MeuComponente';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <MeuComponente titulo="Componente com Props" conteudo="Este é um exemplo de componente usando props." />
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+3. Salve ambos os arquivos.
+
+4. Execute o projeto usando o comando no terminal:
+
+```bash
+npm start
+```
+
+5. O navegador abrirá automaticamente e exibirá o componente com as informações passadas por meio de props.
+
+Certifique-se de anexar os arquivos `MeuComponente.js` e `App.js` modificados na atividade.
