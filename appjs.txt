@@ -1,0 +1,41 @@
+
+1. Abra o arquivo `App.js` e adicione o seguinte código:
+
+```jsx
+// src/App.js
+import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  // Estado para armazenar o valor do contador
+  const [contador, setContador] = useState(0);
+
+  // Função para aumentar o contador
+  const aumentarContador = () => {
+    setContador(contador + 1);
+  };
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h2>Contador: {contador}</h2>
+        <button onClick={aumentarContador}>Aumentar Contador</button>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+2. Salve o arquivo.
+
+3. Execute o projeto usando o comando no terminal:
+
+```bash
+npm start
+```
+
+4. O navegador abrirá automaticamente, e você verá um contador e um botão que aumenta o valor do contador quando clicado.
+
+Certifique-se de anexar o arquivo `App.js` modificado na atividade.
